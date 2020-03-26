@@ -456,7 +456,7 @@ if( ! function_exists( 'auxin_the_main_title_section' ) ){
         echo $customizer_container['before'];
         ?>
         <header id="site-title" class="page-title-section">
-
+                 
             <div <?php echo auxin_make_html_class_attribute( $header_classes ); echo $inline_style; ?>  >
 
                 <?php // Print video background
@@ -848,12 +848,12 @@ function auxin_get_header_layout( $layout = '' ){
                     ?>
                     </div>
                     <?php } ?>
-                    <?php if ( auxin_is_true( $add_search ) ) { ?>
+           <?php if ( auxin_is_true( $add_search ) ) { ?>
                     <!-- search -->
                     <div class="aux-search-box aux-desktop-on aux-start aux-middle">
                         <?php echo auxin_get_search_box( array( 'has_form' => false, 'has_toggle_icon' => true, 'toggle_icon_class' => 'aux-overlay-search' ) );?>
                     </div>
-                    <?php } ?>
+               <?php } ?>
                     <?php
                         if( auxin_is_true( $add_cart ) ) {
                             auxin_wc_add_to_cart(
@@ -1030,6 +1030,7 @@ function auxin_get_header_layout( $layout = '' ){
             ?>
             <div class="aux-header aux-header-elements-wrapper aux-float-layout">
                 <!-- ribbon bar -->
+                <input type="text">
                 <div class="aux-header-elements">
 
                     <!-- logo -->
@@ -1096,7 +1097,9 @@ function auxin_get_header_layout( $layout = '' ){
 
             ?>
             <div class="aux-header aux-header-elements-wrapper aux-float-layout">
-                <!-- ribbon bar -->
+
+
+            <!-- ribbon bar -->
                 <div class="aux-header-elements">
 
                     <!-- logo -->
@@ -1548,6 +1551,7 @@ function auxin_get_header_layout( $layout = '' ){
 
             ?>
             <div class="aux-header aux-header-elements-wrapper aux-float-layout">
+
                 <!-- ribbon bar -->
                 <div class="aux-header-elements">
 
@@ -1575,12 +1579,12 @@ function auxin_get_header_layout( $layout = '' ){
                             );
                         }
                     ?>
-                    <?php if ( auxin_is_true( $add_search ) ) { ?>
+<!--                    --><?php //if ( auxin_is_true( $add_search ) ) { ?>
                     <!-- search -->
                     <div class="aux-search-box aux-desktop-on aux-end aux-middle">
                         <?php echo auxin_get_search_box( array( 'has_form' => false, 'has_toggle_icon' => true, 'toggle_icon_class' => 'aux-overlay-search' ) );?>
                     </div>
-                    <?php } ?>
+<!--                    --><?php //} ?>
                     <div class="aux-btns-box aux-btn1-box aux-end aux-middle <?php echo esc_attr( $button1_breakpoints );?>">
                         <?php if( function_exists( 'auxin_get_header_button' ) ){ echo auxin_get_header_button( 1 ); } ?>
                     </div>
@@ -1765,13 +1769,14 @@ if( ! function_exists('auxin_the_top_header_section') ){
             $classes  = "aux-". esc_attr( $site_header_width ) . "-container";
             $classes .= is_customize_preview() ? ' aux-hide' : '';
         ?>
-            <div id="top-header" class="aux-top-header aux-territory <?php echo esc_attr( $classes ); ?>">
-                <div class="aux-wrapper aux-float-layout">
+<!--            <div id="top-header" class="aux-top-header aux-territory --><?php //echo esc_attr( $classes ); ?><!--">-->
+<!---->
+<!--                <div class="aux-wrapper aux-float-layout">-->
+<!---->
+<!--                    --><?php //echo auxin_get_top_header_markup(); ?>
 
-                    <?php echo auxin_get_top_header_markup(); ?>
-
-                </div><!-- end wrapper -->
-            </div><!-- end top header -->
+            <!--   </div>--><!-- end wrapper -->
+            <!-- </div>--><!-- end top header -->
         <?php
         }
     }
@@ -1794,7 +1799,7 @@ function auxin_the_main_header_section(){
     // if site_header_top_layout is no-header, dont generate the header
     if ( 'no-header' !== ( $top_header_layout = auxin_get_header_layout() ) ) {
     ?>
-    <header id="site-header" <?php auxin_dom_attributes('site_header'); ?> role="banner">
+    <header id="site-header"  <?php auxin_dom_attributes('site_header'); ?> role="banner">
         <div class="aux-wrapper">
 
     <?php

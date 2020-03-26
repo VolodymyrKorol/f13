@@ -1489,7 +1489,6 @@ class Auxin_Customize_Responsive_Dimensions_Controller extends Auxin_Customize_C
     public function render_content() {
         $style_template = !empty($this->css_placeholder ) ? 'data-style-template="' . esc_attr($this->css_placeholder) . '"' : '';
         ?>
-
         <div class="aux-dimension-controller aux-controller-wrapper">
 
             <div class="aux-control aux-controller-container aux-dimension-controller-container" data-type="container" data-selector="<?php echo esc_attr($this->setting->selectors) ;?>">

@@ -99,6 +99,16 @@ class Auxin_Admin_Assets {
         wp_enqueue_script('auxin_global'           , ADMIN_JS_URL . 'global.js'  , array('jquery'), $this->version );
 
 
+
+
+
+
+
+
+
+
+
+
         // Enqueue admin custom scripts /////////////////////////////////////////////////
 
         wp_enqueue_script('json2' );

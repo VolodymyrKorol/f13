@@ -32819,3 +32819,71 @@ aside.aux-dark .aux-slide-title h3 {
     position: relative;
     top: 0;
     right: auto; } }
+
+
+/**
+My styles
+ */
+
+/*********************************Header**********************************/
+.aux-logo-text .site-title{
+    color: #fff;
+}
+.aux-logo-text .site-title ~ .site-description{
+    display: none;
+}
+.hero-main{
+  height: 100vh;
+}
+.hero-slider-img{
+  height: 100vh;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  animation: scale-slide ease-in-out 5s 1 ;
+  transform: scale(1.13);
+
+}
+.aux-menu-label{
+    color: #fff;
+}
+
+.site-header-section.aux-territory.aux-boxed-container.aux-header-dark.aux-add-border{
+    background: transparent;
+    position: absolute;
+    top: 0;
+}
+/*.site-header-section.aux-territory.aux-boxed-container.aux-header-dark.aux-add-border.aux-sticky .aux-menu-label {*/
+/* color: black;*/
+/*}*/
+.site-header-section.aux-territory.aux-boxed-container.aux-header-dark.aux-add-border.aux-sticky{
+     position: fixed;
+     top: 0;
+     width: 100%;
+     box-shadow: 0 4px 0 rgba(34, 34, 34, 0.03);
+     z-index: 1400;
+    background: #2C2C2C;
+}
+
+.site-header-section.aux-add-border .aux-wrapper{
+    border-bottom: none;
+}
+@keyframes  scale-slide {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.13);
+    }
+}
+#carousel-main:before{
+  content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+}
+/*********************************End_Header**********************************/

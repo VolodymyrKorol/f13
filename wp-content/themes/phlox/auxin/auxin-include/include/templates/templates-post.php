@@ -1154,7 +1154,7 @@ function auxin_get_top_header_markup( $args = '' ){
     global $post;
 
     $defaults = array(
-        'class_names' => 'aux-container aux-fold aux-float-wrapper', // classnames over container
+        'class_names' => 'aux-container aux-fold aux-float-wrapper ', // classnames over container
         'container' => array(
             'desktop' => true,
             'tablet'  => true,

@@ -11,6 +11,7 @@ get_header(); ?>
 
     <main id="main" <?php auxin_content_main_class(); ?> >
         <div class="aux-wrapper">
+            <?php get_template_part('templates/theme-parts/slider','main'); ?>
             <div class="aux-container aux-fold">
 
                 <div id="primary" class="aux-primary" >
@@ -25,7 +26,7 @@ get_header(); ?>
                     </div><!-- end content -->
                 </div><!-- end primary -->
 
-                <?php get_sidebar(); ?>
+<!--                --><?php //get_sidebar(); ?>
 
             </div><!-- end container -->
         </div><!-- end wrapper -->

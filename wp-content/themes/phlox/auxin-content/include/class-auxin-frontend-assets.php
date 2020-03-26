@@ -106,6 +106,21 @@ class Auxin_Frontend_Assets {
 
         wp_enqueue_style('auxin-main' , THEME_URL . 'css/main.css' , array('auxin-base'), $this->version );
 
+
+        /**
+         * Мои скрипты
+         */
+        wp_enqueue_style('auxin-bootstrap' , 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' , array(), $this->version );
+        wp_enqueue_script('auxin_bootstrap-popper'           ,  'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' , array('jquery'));
+        wp_enqueue_script('auxin_bootstrap-js'           ,  'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js' , array('jquery'));
+
+
+
+
+
+
+
+
         // Load the special css file
         if( auxin_get_option( 'special_css_file_enabled', 0 ) ){
             $uploads   = wp_get_upload_dir();
